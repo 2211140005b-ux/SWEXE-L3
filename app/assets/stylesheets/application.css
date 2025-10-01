@@ -1,0 +1,53 @@
+/* Flashメッセージ */
+.flash {
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  margin: 1em 0;
+}
+.flash.notice { background: #e0ffe0; border: 1px solid #009900; color: #006600; }
+.flash.alert, .flash.error { background: #ffe0e0; border: 1px solid #990000; color: #660000; }
+
+/* エラーリスト */
+.error-messages {
+  background-color: #fff0f0;
+  border: 1px solid #d9534f;
+  color: #a94442;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+label { font-weight: bold; }
+input[type="text"], textarea {
+  width: 95%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="submit"] {
+  background: #337ab7;
+  color: white;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background: #286090;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 0.8em 0;
+}/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */

@@ -1,0 +1,8 @@
+<h1><%= @book.title %></h1>
+<p>
+  <strong>著者:</strong> <%= @book.author %><br>
+  <strong>説明:</strong> <%= @book.description %>
+</p>
+<%= link_to '編集', edit_book_path(@book) %> |
+<%= link_to '削除', book_path(@book), data: {turbo_method: :delete} %>
+<%= link_to '一覧に戻る', books_path %>

@@ -1,0 +1,30 @@
+<%= debug(@book.errors.full_messages) %>
+<% if @book.errors.any? %>
+  <div class="error-messages">
+    <h2><%= pluralize(@book.errors.count, "件のエラー") %>があります：</h2>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(model: @book, local: true) do |form| %>
+  <div>
+    <%= form.label :title, "タイトル" %><br>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :author, "著者" %><br>
+    <%= form.text_field :author %>
+  </div>
+  <div>
+    <%= form.label :description, "説明" %><br>
+    <%= form.text_area :description %>
+  </div>
+  <div>
+    <%= debug(@book.errors.full_messages) %>
+    <%= form.submit "保存" %>
+  </div>
+<% end %>
